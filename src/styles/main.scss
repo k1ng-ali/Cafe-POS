@@ -1,0 +1,202 @@
+@use 'sass:color';
+
+:root {
+  --bg: #0d1017;
+  --bg-soft: #121823;
+  --panel: #161b23;
+  --panel-alt: #1b2330;
+  --panel-strong: #0f141d;
+  --line: rgba(148, 163, 184, 0.2);
+  --text: #edf2ff;
+  --muted: #9aa5b5;
+  --muted-strong: #c7d0de;
+  --accent: #f4c96d;
+  --accent-strong: #f1b94d;
+  --success: #53d99c;
+  --danger: #ff6b81;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+  --radius: 20px;
+  --radius-sm: 14px;
+  --radius-xs: 10px;
+  --container: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(244, 201, 109, 0.08), transparent 30%),
+    var(--bg);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-pin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.admin-pin-modal__card {
+  width: min(100%, 22rem);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.admin-pin-modal__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.admin-pin-modal__icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 0.75rem;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 201, 109, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(244, 201, 109, 0.2);
+}
+
+.admin-pin-modal__header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.admin-pin-modal__header p {
+  margin: 0.45rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.admin-pin-modal__body {
+  margin-bottom: 1rem;
+}
+
+.admin-pin-modal__body input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #0e141d;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  outline: none;
+}
+
+.admin-pin-modal__body input:focus {
+  border-color: rgba(244, 201, 109, 0.8);
+  box-shadow: 0 0 0 3px rgba(244, 201, 109, 0.1);
+}
+
+.admin-pin-modal__error {
+  margin: 0.8rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.admin-pin-modal__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.72rem 0.9rem;
+  border-radius: 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn--ghost {
+  background: #1d2430;
+  color: #d7dfec;
+  border: 1px solid var(--line);
+}
+
+.btn--ghost:hover {
+  background: #262f3d;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #1d1d1d;
+  box-shadow: 0 12px 28px rgba(241, 185, 77, 0.25);
+}
+
+.btn--primary:hover {
+  background: var(--accent-strong);
+}
+
+@media (min-width: 768px) {
+  .admin-pin-modal__card {
+    padding: 1.75rem;
+  }
+}

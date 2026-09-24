@@ -1,0 +1,30 @@
+{
+  "name": "coffee-pos",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "homepage": "https://github.com/k1ng-ali/Cafe-POS.git",
+  "scripts": {
+    "dev": "vite --port 3000 --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "vue-tsc --noEmit",
+    "deploy": "gh-pages -d dist -r https://github.com/k1ng-ali/Cafe-POS.git"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "lucide-vue-next": "^0.546.0",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.28.2",
+    "sass": "^1.77.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vue-tsc": "^2.2.12"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "CoffeePOS - Локальная POS и Каталог",
+  "description": "Автономная защищенная POS-система для кофеен и магазинов с обменом каталогами и отчетами смен через шифрованные файлы без интернета",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
